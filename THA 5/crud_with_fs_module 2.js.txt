@@ -1,0 +1,43 @@
+//CREATE A JS FILE 
+
+//index.js
+
+>var fs = require("fs");
+
+>fs.mkdirSync("day_1");
+
+>fs.witeFileSync("day_1/hello.txt","Hello Again");
+
+>goto this path /day_1 and run the command
+>node ./day_1/index.js
+
+
+//CREATE A FILE require_test.js as separate component
+
+class Test{
+
+	print(){
+		console.log("I'm inside require_test");
+	     }
+	}
+
+class Test2{
+
+	print(){
+		console.log("I'm not inside require_test");
+	     }
+	}
+
+module.exports =Test;     //exporting this class
+
+
+
+// Importing a Test module  in index.js
+
+var Test = require("./require_test");
+
+var obj = new Test();
+
+console.log(obj.print());
+
+

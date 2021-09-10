@@ -1,0 +1,86 @@
+Microsoft Windows [Version 10.0.19042.1165]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\my computer>node
+Welcome to Node.js v14.17.6.
+Type ".help" for more information.
+> 1+1
+2
+> 1+"1"
+'11'
+> var fs = require("fs");
+undefined
+
+/* file system (fs) module all function  find command  */
+> fs = require("fs");
+
+
+                         /* Visual Code Studio  */  
+
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+//start Node js
+
+PS E:\Devnest  Backend\Backend Node JS> node
+Welcome to Node.js v14.17.6.
+Type ".help" for more information.
+
+
+// FOR IMPORTING FILE SYSTEM FUNCTIONS 
+// we will do REPL (Read, Execute , Print , Loop(Repeat)) programming
+
+//include file system module 
+> var fs = require("fs");
+undefined
+
+
+//make Folder day_1
+> fs.mkdirSync("day_1");
+undefined
+
+
+//Write To Our File Sync
+> fs.writeFileSync("day_1/hello.txt", "Hello", function(err) {
+... if(err) {
+..... console.log(err);
+..... }
+... });
+undefined
+
+
+//append(Update) the given data to our file hello.txt Sync
+> fs.appendFileSync("day_1/hello.txt", " vishal");
+undefined
+
+
+// Read File = We Always Get Output In Small 6 digit Buffers 
+> fs.readFileSync("day_1/hello.txt");
+<Buffer 48 65 6c 6c 6f 20 61 70 70 65 6e 64 65 64>
+> 
+
+
+// Read File = So Also Provide The Encoding utf-8 to get output
+>fs.readFileSync("day_1/hello.txt","utf-8");
+
+
+// Store In A Variable 
+>var data = fs.readFileSync("day_1/hello.txt","utf-8");
+>console.log(data);
+
+
+//Rename File
+>fs.renameSync("day_1/hello.txt","day_1/hello2.txt");
+
+
+//Unlink The File or Delete the exit txt file
+>fs.unlinkSync("day_1/hello2.txt");
+
+
+//Now We Delete The Dir(Foloder)
+>fs.rmdirSync("day_1");
+>.exit                                           //Exit From Node
+
