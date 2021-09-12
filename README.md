@@ -20,6 +20,9 @@
  <h2>THA DAY 5</h2>
 <h3>CRUD WITH FS MODULE</h3>
 
+<h2>THA DAY 6</h2>
+<h3>Event Loop & Async Programming</h3>
+
 </body>
 </html>
 
