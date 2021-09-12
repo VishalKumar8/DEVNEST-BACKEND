@@ -1,0 +1,116 @@
+////////////////////------------------------------- THA  DAY - 6 (EVENT LOOP  &  ASYNC PROGRAMMING)  ----------------------------//////////////////////////
+____________________________________________________________________________________________________________________________________________________________
+
+
+//***************** Event Loop *******************//
+
+>Browsers were not given all the system resources for processing in javascript. 
+>Event Loop is nothing but an algorithm that handles async nature of javascript.
+>Async nature in javascipt is when we dont wait for processing hungry task to be completed earlier in time . 
+ They are delayed untill all the small less hungry tasks are allowed to run first.   
+
+//************ How JavaScript Works **************//
+
+
+//******** Tell me JavaScript what are you ? ********//
+
+// A Single-threaded
+// Non-blocking
+// Asynchronous
+// Concurrent
+// Language
+
+
+// I have a 
+// Call Stack
+// An Event Loop  
+// A Callback Queue
+// Some Other APIs
+// And Stuff
+
+// Hey V8, Do you have a 
+// Call Stack
+// An Event Loop  
+// A Callback Queue
+// Some Other APIs
+// And Stuff
+
+//Google chrome browser v8 engine is used to compile javascript very fast. It has only call-stack and heap only.
+//  I have a 
+// Call Stack
+// And a Heap Only !
+
+
+// JS 
+// > Heap -> Memory Allocation
+// > Stack -> Execution Context
+
+
+// The Call Stack
+// -> One thread == One Call Stack == One Thing at a Time
+
+
+///////////////////////////////////////////////////------------------------- Call Stack -------------------------------////////////////////////////////////
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function square(a) {
+    return multiply(a, a);
+}
+
+function printSquare(n) {
+    var squared = square(n);
+    console.log(squared);
+}
+
+printSquare(4);
+
+// Stack ->   < main() < printSquare(4) < square(a) < multiply(a,b)      [ LIFO ]
+
+
+function foo() {
+    return foo();
+}
+foo();
+
+// If we Call the Above Code then We will get the Error.. Like This..
+// Range Error: Maximum call stack size exceeded
+// because of.. Infinite Loop.
+
+
+// Blocking
+// what happens when things are slow ? 
+
+var foo = $.getsync('//foo.com');
+var bar = $.getsync('//bar.com');
+var qux = $.getsync('//qux.com');
+
+console.log(foo);
+console.log(bar);
+console.log(qux);
+
+
+//------------------------ Event Loop ------------ Loupe -----------------------------//
+
+$.on('button', 'click', function onClick() {
+    setTimeout(function timer() {
+        console.log('You clicked the button!');
+    }, 2000);
+});
+
+console.log("Hi!");
+
+setTimeout(function timeout() {
+    console.log("Click the button!");
+}, 5000);
+
+console.log("Welcome to loupe.");
+
+
+// Event Listeners are also Web APIs.
+
+
+//  Go to Website..  Write in google => Event Loop Website
+//  Loupe > http://latentflip.com
