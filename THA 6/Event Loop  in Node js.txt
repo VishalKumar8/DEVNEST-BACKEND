@@ -67,7 +67,7 @@ function printSquare(n) {
 
 printSquare(4);
 
-// Stack ->   < main() < printSquare(4) < square(a) < multiply(a,b)      [ LIFO ]
+// Stack ->   < main() < printSquare(4) < square(a) < multiply(a,b)      [ LIFO ] (Last in, first out)
 
 
 function foo() {
@@ -92,7 +92,8 @@ console.log(bar);
 console.log(qux);
 
 
-//------------------------ Event Loop ------------ Loupe -----------------------------//
+////////////////////////////////////////////////------------------------ Event Loop ------------ Loupe -----------------------------/////////////////////////////////////////
+______________________________________________________________________________________________________________________________________________________________________________
 
 $.on('button', 'click', function onClick() {
     setTimeout(function timer() {
