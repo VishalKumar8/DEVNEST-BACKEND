@@ -1,13 +1,15 @@
-*************************************************Installing Community Packages From npm****************************************************
->First create .json for dependencies for the app
->So we first create app and list dependencies for nodejs app
+///////////------------------------------------------------------- THA Day 7 Installing Community Packages From npm ------------------------------------------------//////////
+______________________________________________________________________________________________________________________________________________________________________________
+
+=>First create .json for dependencies for the app
+=>So we first create app and list dependencies for nodejs app
+
 >npm init 
--for versioning : 1.0.0 (major.minor.bug fixes)
+
+=>for versioning : 1.0.0 (major.minor.bug fixes)
 
 Now,
 >npm install --save express
-
-
 
 >for seeing live changes while exec like live server in react, in nodejs  we have nodemon.
 
@@ -17,7 +19,7 @@ we are doing server programming with data send with http methods. browser sends 
 
 keep in mind : Security , Performance, Edge cases (backend me me bottom to top approch hoti h)
 
-***************code index.js************
+////------------------ code index.js --------------------------////
 
 const express = require('express');         //express ek function defination (export = e;) ko pass karta h
 const app = express();			    // usko hame const app = express();  se call karna padta h
