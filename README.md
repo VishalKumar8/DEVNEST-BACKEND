@@ -23,6 +23,11 @@
 <h2>THA DAY 6</h2>
 <h3>Event Loop & Async Programming</h3>
 
+ <h2>THA DAY 7</h2>
+<h3>EXPRESS AND DESIGN SYSTEM</h3>
+ 
+ <h2>THA DAY 8</h2>
+<h3>EXPRESS MIDDLEWARE</h3>
 </body>
 </html>
 
