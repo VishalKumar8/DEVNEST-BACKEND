@@ -1,0 +1,46 @@
+////////////////////--------------------------------------------- THA - 10 - (DEPLOYMENT AND CI/CD) --------------------------------------///////////////////
+
+
+//****** DEPLOY APP ON AWS **********//
+
+Go to the Google --->
+
+AWS ---> Cloud Services - Amazon Web Services (AWS) ---> Create an AWS Account 
+
+>launch VM >Choose OS >Free tier only > Ubuntu 20
+>1 instances >storage  > add ur port access publically available (anywhere) > provide key value as RSA encryption for logining in
+
+>Go to instances > select and start instance >Connect >Go to SSH client to access remotely
+
+>install  ssh if u dont have
+>ssh -i "rsa" aws.domain.com
+>curl --> install nvm
+>source ENV var update
+>nvm install v12
+>nvm use v12
+>create dir > git clone {proj} /  npx express-generator
+
+>PORT=8080 && DEBUG...
+
+>NOw goto ==> aws_server.....com/8080
+>run nodejs app in backgroung in aws to make it always avalable
+>use forever/pm2 
+>npm install -g forever
+>forever stopall
+>forever start
+
+>goto file ./bin/www
+>edit this to port 8080 as default
+>forever start ./bin/www
+
+learn more CI/CD with AWS
+
+
+
+//**************************** Steps to deploy on AWS *************************//
+
+1. Create an account on aws
+2. Initialize an ec2 instance
+3. install all the git and node commands
+4. load your repository on ec2
+5. host it from there using CI/CD
